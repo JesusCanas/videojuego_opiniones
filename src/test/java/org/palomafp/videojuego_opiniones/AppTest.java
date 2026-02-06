@@ -1,17 +1,22 @@
 package org.palomafp.videojuego_opiniones;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
+import org.palomafp.videojuegoopiniones.App;
+
 /**
- * Unit test for simple App.
+ * Pruebas unitarias para la clase App
  */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
+public class AppTest {
+
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void testAppMain() {
+        try {
+            App.main(new String[] {});
+        } catch (Exception e) {
+            fail("App.main() no debería lanzar excepción: " + e.getMessage());
+        }
     }
+
 }
