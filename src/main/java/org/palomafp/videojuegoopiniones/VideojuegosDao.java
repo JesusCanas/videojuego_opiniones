@@ -47,8 +47,11 @@ public class VideojuegosDao {
        this.plataformas.add(plataforma3);
         this.resenyas.add(resenya3);
     }   
-    public Videojuego getObjetoRandom(){
+    public Videojuego getVideojuegoRandom(){
         return this.videojuegos.get(0);
+    }
+    public Resenya getResenyaRandom(){
+        return this.resenyas.get(0);
     }
 
 }
