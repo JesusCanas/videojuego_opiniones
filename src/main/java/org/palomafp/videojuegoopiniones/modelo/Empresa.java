@@ -8,10 +8,11 @@ public class Empresa {
     private int anyosActividad;
     private ArrayList<Videojuego> videojuegos;
 
-    public Empresa(int codigo, String nombre, int anyosActividad) {
+    public Empresa(int codigo, String nombre, int anyosActividad,ArrayList<Videojuego> videojuegos) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.anyosActividad = anyosActividad;
+        this.videojuegos = videojuegos;
     }
 
     public int getCodigo() {

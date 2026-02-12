@@ -11,12 +11,13 @@ public class Plataforma {
     private int capacidad;
     private Videojuego videojuego;
 
-    public Plataforma(int codigo, String modelo, Marca marca, String color, int capacidad) {
+    public Plataforma(int codigo, String modelo, Marca marca, String color, int capacidad, Videojuego videojuego) {
         this.codigo = codigo;
         this.modelo = modelo;
         this.marca = marca;
         this.color = color;
         this.capacidad = capacidad;
+        this.videojuego = videojuego;
     }
 
     public int getCodigo() {

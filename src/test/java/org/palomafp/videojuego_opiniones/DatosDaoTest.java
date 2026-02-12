@@ -4,24 +4,24 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
-import org.palomafp.videojuegoopiniones.DatosDao;
+import org.palomafp.videojuegoopiniones.VideojuegosDao;
 
 /**
  * Pruebas básicas para DatosDao
  */
 public class DatosDaoTest {
 
-    private DatosDao datosDao;
+    private VideojuegosDao datosDao;
 
     @BeforeEach
     public void setUp() {
-        datosDao = new DatosDao();
+        datosDao = new VideojuegosDao();
     }
 
     @Test
     public void testConstructor() {
         assertNotNull(datosDao);
-        assertTrue(datosDao instanceof DatosDao);
+        assertTrue(datosDao instanceof VideojuegosDao);
     }
 
     @Test
@@ -41,8 +41,8 @@ public class DatosDaoTest {
 
     @Test
     public void testMultiplesInstancias() {
-        DatosDao d1 = new DatosDao();
-        DatosDao d2 = new DatosDao();
+        VideojuegosDao d1 = new VideojuegosDao();
+        VideojuegosDao d2 = new VideojuegosDao();
         assertNotNull(d1);
         assertNotNull(d2);
         assertNotSame(d1, d2);
