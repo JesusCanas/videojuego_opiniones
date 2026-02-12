@@ -22,8 +22,9 @@ public class VideojuegosDao {
     private ArrayList <Plataforma> plataformas = new ArrayList ();
     private ArrayList <Resenya> resenyas = new ArrayList ();
     private ArrayList<Videojuego> videojuegos =  new ArrayList ();
-    public getVideojuegosDao() {
+    private ArrayList <VideojuegosDao> videojuegosDaos=new ArrayList ();
 
+    public VideojuegosDao(){
         // Crear instancias iniciales
         this.plataformas.add(this.plataforma);
         this. resenyas.add(this.resenya);
@@ -32,9 +33,10 @@ public class VideojuegosDao {
         this.videojuego = new Videojuego(444, "Pokemon", 60, Videojuego.Genero.AVENTURA, new Date(),this.plataformas,this.resenyas);
         this.plataforma = new Plataforma(445, "Nintendo 3DS", Plataforma.Marca.NINTENDO,"Azul", 100,videojuego);
         this.empresa = new Empresa(12212, "Nintendo", 100,this.videojuegos);
-        this.resenya = new Resenya(4.5, "Buenísimo", new Date());
-      
-
+        this.resenya = new Resenya(4.5, "Buenísimo", new Date()); 
     }
+        
+
+    
 
 }
