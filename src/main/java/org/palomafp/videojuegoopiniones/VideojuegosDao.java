@@ -14,23 +14,11 @@ import org.palomafp.videojuegoopiniones.modelo.Videojuego;
  */
 public class VideojuegosDao {
 
-    // Instancias de las clases del modelo
-    private Videojuego videojuego1;
-    private Plataforma plataforma1;
-    private Empresa empresa1;
-    private Resenya resenya1;
-     private Videojuego videojuego2;
-    private Plataforma plataforma2;
-    private Empresa empresa2;
-    private Resenya resenya2;
-    private ArrayList <VideojuegosDao> videojuegosDaos=new ArrayList  <VideojuegosDao> ();
+
+    private ArrayList <VideojuegosDao> videojuegosDaos=null;
     private ArrayList <Plataforma> plataformas = new ArrayList <Plataforma>();
     private ArrayList <Resenya> resenyas = new ArrayList <Resenya> ();
-    private ArrayList<Videojuego> videojuegos =  new ArrayList <Videojuego>();
-     private ArrayList <Plataforma> plataformas2 = new ArrayList <Plataforma>();
-    private ArrayList <Resenya> resenyas2 = new ArrayList <Resenya> ();
-    private ArrayList<Videojuego> videojuegos2 =  new ArrayList <Videojuego>();
-   
+    private ArrayList<Videojuego> videojuegos=  new ArrayList <Videojuego>();
 
 
     /**
@@ -38,20 +26,29 @@ public class VideojuegosDao {
      */
     public VideojuegosDao(){
         // Crear instancias iniciales
-        this.plataformas.add(this.plataforma1);
-        this. resenyas.add(this.resenya1);
-        this.videojuegos.add(this.videojuego1);
-        
-        this.videojuego1 = new Videojuego(444, "Pokemon", 60, Videojuego.Genero.AVENTURA, new Date(),this.plataformas,this.resenyas);
-        this.plataforma1 = new Plataforma(445, "Nintendo 3DS", Plataforma.Marca.NINTENDO,"Azul", 100,this.videojuego1);
-        this.empresa1 = new Empresa(12212, "Nintendo", 100,this.videojuegos);
-        this.resenya1 = new Resenya(4.5, "Buenísimo", new Date()); 
        
         
-        this.videojuegos.add(videojuego2);
-        this.videojuego2 = new Videojuego(434, "Super Mario 3D", 60, Videojuego.Genero.AVENTURA, new Date(),this.plataformas,this.resenyas);
-        this.resenya2 = new Resenya(4.5, "Que gran Juego", new Date());
-      
+       Videojuego videojuego1 = new Videojuego(444, "Pokemon", 60, Videojuego.Genero.AVENTURA, new Date(),this.plataformas,this.resenyas);
+       Plataforma plataforma1 = new Plataforma(445, "Nintendo 3DS", Plataforma.Marca.NINTENDO,"Azul", 1000,videojuego1);
+       Empresa empresa1 = new Empresa(12212, "Nintendo", 100,this.videojuegos);
+       Resenya resenya1 = new Resenya(4.5, "Buenísimo", new Date()); 
+       this.plataformas.add(plataforma1);
+       this. resenyas.add(resenya1);
+       this.videojuegos.add(videojuego1);
+       
+      Videojuego videojuego2 = new Videojuego(434, "Super Mario 3D", 60, Videojuego.Genero.AVENTURA, new Date(),this.plataformas,this.resenyas);
+      Resenya resenya2 = new Resenya(4.5, "Que gran Juego", new Date());
 
-    }    
+       Videojuego videojuego3 = new Videojuego(222, "GodOfWar", 60, Videojuego.Genero.ACCION, new Date(),this.plataformas,this.resenyas);
+       Plataforma plataforma3 = new Plataforma(555, "Play 5", Plataforma.Marca.SONY,"Blanco", 2000,videojuego3);
+       Empresa empresa3 = new Empresa(12212, "Sony", 37,this.videojuegos);
+       Resenya resenya3 = new Resenya(4.5, "Buenísimo", new Date());
+       this.videojuegos.add(videojuego3);
+       this.plataformas.add(plataforma3);
+        this.resenyas.add(resenya3);
+    }   
+    public Videojuego getObjetoRandom(){
+        return this.videojuegos.get(0);
+    }
+
 }

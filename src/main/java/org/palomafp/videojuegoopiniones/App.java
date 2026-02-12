@@ -1,9 +1,5 @@
 package org.palomafp.videojuegoopiniones;
 
-import java.util.ArrayList;
-
-import org.palomafp.videojuegoopiniones.modelo.Videojuego;
-
 /**
  * Aplicación principal para demostrar el modelo de datos de videojuegos
  */
@@ -34,6 +30,7 @@ public class App
             
                 case 2:
                     break;
+
             }
         } while (menu != 5);
 
