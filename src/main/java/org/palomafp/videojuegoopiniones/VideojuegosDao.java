@@ -15,28 +15,38 @@ import org.palomafp.videojuegoopiniones.modelo.Videojuego;
 public class VideojuegosDao {
 
     // Instancias de las clases del modelo
-    private Videojuego videojuego;
-    private Plataforma plataforma;
-    private Empresa empresa;
-    private Resenya resenya;
-    private ArrayList <Plataforma> plataformas = new ArrayList ();
-    private ArrayList <Resenya> resenyas = new ArrayList ();
-    private ArrayList<Videojuego> videojuegos =  new ArrayList ();
-    private ArrayList <VideojuegosDao> videojuegosDaos=new ArrayList ();
+   
+    private ArrayList <VideojuegosDao> videojuegosDaos=new ArrayList  <VideojuegosDao> ();
+    private ArrayList <Plataforma> plataformas = new ArrayList <Plataforma>();
+    private ArrayList <Resenya> resenyas = new ArrayList <Resenya> ();
+    private ArrayList<VideojuegosDao> videojuegos =  new ArrayList <VideojuegosDao>();
+     private ArrayList <Plataforma> plataformas2 = new ArrayList <Plataforma>();
+    private ArrayList <Resenya> resenyas2 = new ArrayList <Resenya> ();
+    private ArrayList<Videojuego> videojuegos2 =  new ArrayList <Videojuego>();
+   
+
+
 
     public VideojuegosDao(){
         // Crear instancias iniciales
-        this.plataformas.add(this.plataforma);
-        this. resenyas.add(this.resenya);
-        this.videojuegos.add(this.videojuego);
+      
         
-        this.videojuego = new Videojuego(444, "Pokemon", 60, Videojuego.Genero.AVENTURA, new Date(),this.plataformas,this.resenyas);
-        this.plataforma = new Plataforma(445, "Nintendo 3DS", Plataforma.Marca.NINTENDO,"Azul", 100,videojuego);
-        this.empresa = new Empresa(12212, "Nintendo", 100,this.videojuegos);
-        this.resenya = new Resenya(4.5, "Buenísimo", new Date()); 
+        Videojuego videojuego1 = new Videojuego(444, "Pokemon", 60, Videojuego.Genero.AVENTURA, new Date(),this.plataformas,this.resenyas);
+        Plataforma plataforma1 = new Plataforma(445, "Nintendo 3DS", Plataforma.Marca.NINTENDO,"Azul", 100,videojuego1);
+        this.plataformas.add(plataforma1);
+        Empresa empresa1 = new Empresa(12212, "Nintendo", 100,this.videojuegos);
+        Resenya resenya1 = new Resenya(4.5, "Buenísimo", new Date()); 
+        
+        this. resenyas.add(resenya1);
+        videojuegos.add(videojuego1);
+       
+        
+        this.videojuegos.add(videojuego2);
+        Videojuego videojuego2 = new Videojuego(434, "Super Mario 3D", 60, Videojuego.Genero.AVENTURA, new Date(),this.plataformas,this.resenyas);
+       Resenya resenya2 = new Resenya(4.5, "Que gran Juego", new Date());
+        this.videojuegosDaos.add(VideojuegosDao);
+
     }
-        
-
-    
-
+    public VideojuegosDao getVideojuegosDao(){
+    }    
 }
