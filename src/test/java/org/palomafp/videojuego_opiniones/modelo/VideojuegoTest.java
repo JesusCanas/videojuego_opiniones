@@ -19,7 +19,7 @@ public class VideojuegoTest {
     @BeforeEach
     public void setUp() {
         fechaLanzamiento = new Date(1997 - 1900, 6, 22);
-        videojuego = new Videojuego(444, "Pokemon", 60, Videojuego.Genero.AVENTURA, fechaLanzamiento);
+        videojuego = new Videojuego(444, "Pokemon", 60, Videojuego.Genero.AVENTURA, fechaLanzamiento, null, null);
     }
 
     // Pruebas del Constructor
@@ -35,7 +35,7 @@ public class VideojuegoTest {
 
     @Test
     public void testConstructorConDiferentesGeneros() {
-        Videojuego videojuegoRPG = new Videojuego(1, "Final Fantasy", 50, Videojuego.Genero.RPG, new Date());
+        Videojuego videojuegoRPG = new Videojuego(1, "Final Fantasy", 50, Videojuego.Genero.RPG, new Date(), null, null);
         assertEquals(Videojuego.Genero.RPG, videojuegoRPG.getGenero());
     }
 

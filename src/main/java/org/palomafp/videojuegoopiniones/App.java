@@ -3,8 +3,11 @@ package org.palomafp.videojuegoopiniones;
 /**
  * Aplicación principal para demostrar el modelo de datos de videojuegos
  */
-public class App 
+public class App
 {
+    /**
+     * @param args
+     */
     public static void main( String[] args )
     {
 
@@ -25,7 +28,7 @@ public class App
             
             switch (menu) {
                 case 1:
-                    
+                    System.out.println();
                     break;
             
                 case 2:

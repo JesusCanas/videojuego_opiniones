@@ -15,7 +15,7 @@ public class EmpresaTest {
 
     @BeforeEach
     public void setUp() {
-        empresa = new Empresa(12212, "Nintendo", 100);
+        empresa = new Empresa(12212, "Nintendo", 100, null);
     }
 
     // Pruebas del Constructor
@@ -29,11 +29,11 @@ public class EmpresaTest {
 
     @Test
     public void testConstructorConDiferentesEmpresas() {
-        Empresa sony = new Empresa(1, "Sony", 75);
+        Empresa sony = new Empresa(1, "Sony", 75, null);
         assertEquals("Sony", sony.getNombre());
         assertEquals(75, sony.getAnyosActividad());
         
-        Empresa microsoft = new Empresa(2, "Microsoft", 50);
+        Empresa microsoft = new Empresa(2, "Microsoft", 50, null);
         assertEquals("Microsoft", microsoft.getNombre());
         assertEquals(50, microsoft.getAnyosActividad());
     }

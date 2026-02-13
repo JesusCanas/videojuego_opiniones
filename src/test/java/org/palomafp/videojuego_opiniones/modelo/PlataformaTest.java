@@ -15,7 +15,7 @@ public class PlataformaTest {
 
     @BeforeEach
     public void setUp() {
-        plataforma = new Plataforma(445, "Nintendo 3DS", Plataforma.Marca.NINTENDO, "Azul", 100);
+        plataforma = new Plataforma(445, "Nintendo 3DS", Plataforma.Marca.NINTENDO, "Azul", 100, null);
     }
 
     // Pruebas del Constructor
@@ -31,10 +31,10 @@ public class PlataformaTest {
 
     @Test
     public void testConstructorConDiferentesMarcas() {
-        Plataforma ps4 = new Plataforma(1, "PS4", Plataforma.Marca.SONY, "Negra", 500);
+        Plataforma ps4 = new Plataforma(1, "PS4", Plataforma.Marca.SONY, "Negra", 500, null);
         assertEquals(Plataforma.Marca.SONY, ps4.getMarca());
         
-        Plataforma xbox = new Plataforma(2, "Xbox One", Plataforma.Marca.MICROSOFT, "Negra", 1000);
+        Plataforma xbox = new Plataforma(2, "Xbox One", Plataforma.Marca.MICROSOFT, "Negra", 1000, null);
         assertEquals(Plataforma.Marca.MICROSOFT, xbox.getMarca());
     }
 
