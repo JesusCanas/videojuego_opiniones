@@ -54,8 +54,8 @@ public class VideojuegosDao {
         return this.videojuegos.get( (int)(Math.random() * this.videojuegos.size()) );
     }
 
-    public Videojuego getVideojuegoById(ArrayList<Videojuego> lista, int id){
-        for (Videojuego v : lista) {
+    public Videojuego getVideojuegoById(int id){
+        for (Videojuego v : this.videojuegos) {
         if (v.getCodigo() == id) {
             return v;
         }
@@ -63,8 +63,8 @@ public class VideojuegosDao {
     return null; // si no existe
         }
 
-    public Object demostrarTodo() {
-        throw new UnsupportedOperationException("Unimplemented method 'demostrarTodo'");
+    public ArrayList<Videojuego> getVideojuegos() {
+        return videojuegos;
     }
 
 
