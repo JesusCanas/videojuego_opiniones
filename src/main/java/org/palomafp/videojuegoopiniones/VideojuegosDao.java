@@ -16,9 +16,9 @@ public class VideojuegosDao {
 
 
     // private ArrayList<VideojuegosDao> videojuegosDaos= new ArrayList<>();
-    protected ArrayList<Plataforma> plataformas = new ArrayList <Plataforma>();
-    protected ArrayList<Resenya> resenyas = new ArrayList <Resenya> ();
-    protected ArrayList<Videojuego> videojuegos=  new ArrayList <Videojuego>();
+     ArrayList<Plataforma> plataformas = new ArrayList <Plataforma>();
+     ArrayList<Resenya> resenyas = new ArrayList <Resenya> ();
+    ArrayList<Videojuego> videojuegos=  new ArrayList <Videojuego>();
 
 
     /**
