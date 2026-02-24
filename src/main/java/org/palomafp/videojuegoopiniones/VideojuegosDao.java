@@ -51,17 +51,19 @@ public class VideojuegosDao {
         this.resenyas.add(resenya3);
     }   
     public Videojuego getVideojuegoRandom(){
-        return this.videojuegos.get(0);
-    }
-    public Resenya getResenyaRandom(){
-        return this.resenyas.get(0);
+        return this.videojuegos.get( (int)(Math.random() * this.videojuegos.size()) );
     }
 
-    public Plataforma getPlataformaRandom(){
-        return this.plataformas.get(0);
+    public Videojuego getVideojuegoById(ArrayList<Videojuego> lista, int id){
+        for (Videojuego v : lista) {
+        if (v.getCodigo() == id) {
+            return v;
+        }
     }
+    return null; // si no existe
+        }
+
     public Object demostrarTodo() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'demostrarTodo'");
     }
 
