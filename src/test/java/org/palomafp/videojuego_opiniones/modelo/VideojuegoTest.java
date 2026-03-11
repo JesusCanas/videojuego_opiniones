@@ -1,9 +1,11 @@
 package org.palomafp.videojuego_opiniones.modelo;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.Date;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.palomafp.videojuegoopiniones.modelo.Videojuego;
@@ -19,7 +21,7 @@ public class VideojuegoTest {
     @BeforeEach
     public void setUp() {
         fechaLanzamiento = new Date(1997 - 1900, 6, 22);
-        videojuego = new Videojuego(444, "Pokemon", 60, Videojuego.Genero.AVENTURA, fechaLanzamiento, null, null);
+        videojuego = new Videojuego(444, "Pokemon", 60, Videojuego.Genero.AVENTURA, fechaLanzamiento, null, null,null);
     }
 
     // Pruebas del Constructor
@@ -35,7 +37,7 @@ public class VideojuegoTest {
 
     @Test
     public void testConstructorConDiferentesGeneros() {
-        Videojuego videojuegoRPG = new Videojuego(1, "Final Fantasy", 50, Videojuego.Genero.RPG, new Date(), null, null);
+        Videojuego videojuegoRPG = new Videojuego(1, "Final Fantasy", 50, Videojuego.Genero.RPG, new Date(), null, null,null);
         assertEquals(Videojuego.Genero.RPG, videojuegoRPG.getGenero());
     }
 

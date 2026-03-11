@@ -2,11 +2,15 @@ package org.palomafp.videojuegoopiniones.modelo;
 
 import java.util.ArrayList;
 /**
- * 
+ * Clase que tienen los datos de la plataforma que hace los videojuegos
+ * @author Jesús Cañas Y Miguel Martin 
  */
 public class Plataforma {
     private int codigo;
     private String modelo;
+    /**
+     * emun de las marcas de las videojuegos
+     */
     public static enum Marca {
         SONY, MICROSOFT, NINTENDO, PC, SEGA
     }
@@ -14,7 +18,14 @@ public class Plataforma {
     private String color;
     private int capacidad;
      private ArrayList<Videojuego> videojuegos;
-
+    /**
+     * constructor de la clase plataforma
+     * @param codigo instancia el codigo de  la plataforma
+     * @param modelo instancia el modelo
+     * @param marca instancia el color
+     * @param color
+     * @param capacidad
+     */
     public Plataforma(int codigo, String modelo, Marca marca, String color, int capacidad) {
         this.codigo = codigo;
         this.modelo = modelo;
@@ -71,10 +82,16 @@ public class Plataforma {
     public void setVideojuego(ArrayList<Videojuego> videojuego) {
         this.videojuegos = videojuego;
     }
+    /**
+     * Añade el objeto videojuego al arraylist
+     * @param videojuego parametro del objeto videojuego
+     */
     public void addVideojuego(Videojuego videojuego) {
         this.videojuegos.add(videojuego);
     }
-
+    /**
+     * muestra la informacion
+     */
     @Override
     public String toString() {
         return "Plataforma{" +

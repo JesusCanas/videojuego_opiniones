@@ -1,7 +1,9 @@
 package org.palomafp.videojuego_opiniones.modelo;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.palomafp.videojuegoopiniones.modelo.Empresa;
@@ -15,7 +17,7 @@ public class EmpresaTest {
 
     @BeforeEach
     public void setUp() {
-        empresa = new Empresa(12212, "Nintendo", 100, null);
+        empresa = new Empresa(12212, "Nintendo", 100);
     }
 
     // Pruebas del Constructor
@@ -29,11 +31,11 @@ public class EmpresaTest {
 
     @Test
     public void testConstructorConDiferentesEmpresas() {
-        Empresa sony = new Empresa(1, "Sony", 75, null);
+        Empresa sony = new Empresa(1, "Sony", 75);
         assertEquals("Sony", sony.getNombre());
         assertEquals(75, sony.getAnyosActividad());
         
-        Empresa microsoft = new Empresa(2, "Microsoft", 50, null);
+        Empresa microsoft = new Empresa(2, "Microsoft", 50);
         assertEquals("Microsoft", microsoft.getNombre());
         assertEquals(50, microsoft.getAnyosActividad());
     }

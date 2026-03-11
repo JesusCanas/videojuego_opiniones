@@ -1,7 +1,9 @@
 package org.palomafp.videojuego_opiniones.modelo;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.palomafp.videojuegoopiniones.modelo.Plataforma;
@@ -15,7 +17,7 @@ public class PlataformaTest {
 
     @BeforeEach
     public void setUp() {
-        plataforma = new Plataforma(445, "Nintendo 3DS", Plataforma.Marca.NINTENDO, "Azul", 100, null);
+        plataforma = new Plataforma(445, "Nintendo 3DS", Plataforma.Marca.NINTENDO, "Azul", 100);
     }
 
     // Pruebas del Constructor
@@ -31,10 +33,10 @@ public class PlataformaTest {
 
     @Test
     public void testConstructorConDiferentesMarcas() {
-        Plataforma ps4 = new Plataforma(1, "PS4", Plataforma.Marca.SONY, "Negra", 500, null);
+        Plataforma ps4 = new Plataforma(1, "PS4", Plataforma.Marca.SONY, "Negra", 500);
         assertEquals(Plataforma.Marca.SONY, ps4.getMarca());
         
-        Plataforma xbox = new Plataforma(2, "Xbox One", Plataforma.Marca.MICROSOFT, "Negra", 1000, null);
+        Plataforma xbox = new Plataforma(2, "Xbox One", Plataforma.Marca.MICROSOFT, "Negra", 1000);
         assertEquals(Plataforma.Marca.MICROSOFT, xbox.getMarca());
     }
 
