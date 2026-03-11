@@ -2,10 +2,6 @@ package org.palomafp.videojuegoopiniones;
 
 import java.util.Scanner;
 
-import org.palomafp.videojuegoopiniones.modelo.Plataforma;
-import org.palomafp.videojuegoopiniones.modelo.Resenya;
-import org.palomafp.videojuegoopiniones.modelo.Videojuego;
-
 /**
  * Aplicación principal para demostrar el modelo de datos de videojuegos
  */
@@ -25,48 +21,30 @@ public class App {
         out.println("=== SISTEMA DE OPINIONES DE VIDEOJUEGOS ===");
 
         // Crear instancia de DatosDao que gestiona todas las entidades
-        VideojuegosDao dao = new VideojuegosDao();
+        VideojuegosDAO dao = new VideojuegosDAO();
         
         do {
             System.out.println("\n------------ MENU ------------");
-            System.out.println("1. Mostrar videojuegos");
-            System.out.println("2. Mostrar plataformas");
-            System.out.println("3. Mostrar reseñas");
-            System.out.println("4. Mostrar videojuego random");
-            System.out.println("5.  Mostrar videojuego por id");
-            System.out.println("6. Salir");
+            System.out.println("1. Mostrar videojuego random");
+            System.out.println("2. Mostrar videojuego por id");
+            System.out.println("3. Mostrar todo los videojuegos.");
+            System.out.println("4. Salir");
             System.out.println("------------------------------");
             System.out.print("Seleccione una opción: ");
             menu = sc.nextInt();
 
             switch (menu) {
-
                 case 1:
-                    for (Videojuego v : dao.videojuegos) {
-                        out.println(v);
-                    }
-                    break;
-
-                case 2:
-                    for (Plataforma p : dao.plataformas) {
-                        out.println(p);
-                    }
-                    break;
-
-                case 3:
-                    for (Resenya r : dao.resenyas) {
-                        out.println(r);
-                    }
-                    break;
-                case 4:
                     out.print(dao.getVideojuegoRandom());
                     break;
-                case 5:
+                case 2:
                     out.print("Introduce el id del videojuego:");
                     id=sc.nextInt();
                     out.print(dao.getVideojuegoById(id));
                     break;
-                case 6:
+                case 3:
+                    out.print("Introduce el id del videojuego:");
+                case 4:
                     out.println("Saliendo del programa...");
                     break;
 
@@ -74,7 +52,7 @@ public class App {
                     out.println("Opción no válida. Intente de nuevo.");
             }
 
-        } while (menu != 6);
+        } while (menu != 4);
         sc.close();
         out.println("\n=== FIN DE LA DEMOSTRACIÓN ===");
     }

@@ -1,5 +1,7 @@
 package org.palomafp.videojuegoopiniones.modelo;
 
+import java.util.ArrayList;
+
 public class Plataforma {
     private int codigo;
     private String modelo;
@@ -9,15 +11,15 @@ public class Plataforma {
     private Marca marca;
     private String color;
     private int capacidad;
-    private Videojuego videojuego;
+     private ArrayList<Videojuego> videojuegos;
 
-    public Plataforma(int codigo, String modelo, Marca marca, String color, int capacidad, Videojuego videojuego) {
+    public Plataforma(int codigo, String modelo, Marca marca, String color, int capacidad) {
         this.codigo = codigo;
         this.modelo = modelo;
         this.marca = marca;
         this.color = color;
         this.capacidad = capacidad;
-        this.videojuego = videojuego;
+        this.videojuegos = new ArrayList<>();
     }
 
     public int getCodigo() {
@@ -60,12 +62,15 @@ public class Plataforma {
         this.capacidad = capacidad;
     }
 
-    public Videojuego getVideojuego() {
-        return videojuego;
+    public ArrayList<Videojuego>  getVideojuego() {
+        return videojuegos;
     }
 
-    public void setVideojuego(Videojuego videojuego) {
-        this.videojuego = videojuego;
+    public void setVideojuego(ArrayList<Videojuego> videojuego) {
+        this.videojuegos = videojuego;
+    }
+    public void addVideojuego(Videojuego videojuego) {
+        this.videojuegos.add(videojuego);
     }
 
     @Override

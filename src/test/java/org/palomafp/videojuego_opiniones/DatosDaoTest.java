@@ -11,7 +11,7 @@ import java.util.Scanner;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.palomafp.videojuegoopiniones.App;
-import org.palomafp.videojuegoopiniones.VideojuegosDao;
+import org.palomafp.videojuegoopiniones.VideojuegosDAO;
 import org.palomafp.videojuegoopiniones.modelo.Videojuego;
 
 /**
@@ -19,17 +19,17 @@ import org.palomafp.videojuegoopiniones.modelo.Videojuego;
  */
 public class DatosDaoTest {
 
-    private VideojuegosDao datosDao;
+    private VideojuegosDAO datosDao;
 
     @BeforeEach
     public void setUp() {
-        datosDao = new VideojuegosDao();
+        datosDao = new VideojuegosDAO();
     }
 
     @Test
     public void testConstructorInicializaListas() {
         assertNotNull(datosDao);
-        assertTrue(datosDao instanceof VideojuegosDao);
+        assertTrue(datosDao instanceof VideojuegosDAO);
 
         assertNotNull(datosDao.getVideojuegos());
         assertEquals(3, datosDao.getVideojuegos().size(), "Debe inicializar 3 videojuegos por defecto");
@@ -72,8 +72,8 @@ public class DatosDaoTest {
 
     @Test
     public void testMultiplesInstanciasIndependientes() {
-        VideojuegosDao d1 = new VideojuegosDao();
-        VideojuegosDao d2 = new VideojuegosDao();
+        VideojuegosDAO d1 = new VideojuegosDAO();
+        VideojuegosDAO d2 = new VideojuegosDAO();
         assertNotNull(d1);
         assertNotNull(d2);
         assertNotSame(d1, d2);

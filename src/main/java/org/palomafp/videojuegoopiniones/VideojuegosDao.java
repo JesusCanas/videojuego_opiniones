@@ -13,7 +13,7 @@ import org.palomafp.videojuegoopiniones.modelo.Videojuego;
 /**
  * Clase DatosDao que gestiona la creación y manipulación de todas las entidades del modelo
  */
-public class VideojuegosDao {
+public class VideojuegosDAO {
 
 
     // private ArrayList<VideojuegosDao> videojuegosDaos= new ArrayList<>();
@@ -23,10 +23,10 @@ public class VideojuegosDao {
     /**
      * 
      */
-    public VideojuegosDao(){
+    public VideojuegosDAO(){
         // Crear instancias iniciales
 
-        Plataforma plataforma1 = new Plataforma(445, "Nintendo 3DS", Plataforma.Marca.NINTENDO,"Azul", 1000,videojuego1);
+        Plataforma plataforma1 = new Plataforma(445, "Nintendo 3DS", Plataforma.Marca.NINTENDO,"Azul", 1000);
         ArrayList<Plataforma> plataformas = new ArrayList <Plataforma>();
         plataformas.add(plataforma1);
         
@@ -39,25 +39,19 @@ public class VideojuegosDao {
         Videojuego videojuego1 = new Videojuego(444, "Pokemon", 60, Videojuego.Genero.AVENTURA, new Date(), plataformas, resenyas, empresa1);
         empresa1.addVideojuego(videojuego1);
         
-        
-        
-        this.plataformas.add(plataforma1);
-        this. resenyas.add(resenya1);
-        this.videojuegos.add(videojuego1);
-
-       
-        Videojuego videojuego2 = new Videojuego(434, "Super Mario 3D", 60, Videojuego.Genero.AVENTURA, new Date(),this.plataformas,this.resenyas);
         Resenya resenya2 = new Resenya(4.5, "Que gran Juego", new Date());
-        this. resenyas.add(resenya2);
-        this.videojuegos.add(videojuego2);
+        resenyas.add(resenya2);
+        Videojuego videojuego2 = new Videojuego(434, "Super Mario 3D", 60, Videojuego.Genero.AVENTURA, new Date(),plataformas,resenyas, empresa1);
+        videojuegos.add(videojuego2);
 
-        Videojuego videojuego3 = new Videojuego(222, "GodOfWar", 60, Videojuego.Genero.ACCION, new Date(),this.plataformas,this.resenyas);
-        Plataforma plataforma3 = new Plataforma(555, "Play 5", Plataforma.Marca.SONY,"Blanco", 2000,videojuego3);
-        Empresa empresa3 = new Empresa(12212, "Sony", 37,this.videojuegos);
-        Resenya resenya3 = new Resenya(4.5, "Buenísimo", new Date());
-        this.videojuegos.add(videojuego3);
-        this.plataformas.add(plataforma3);
-        this.resenyas.add(resenya3);
+        
+        Plataforma plataforma3 = new Plataforma(555, "Play 5", Plataforma.Marca.SONY,"Blanco", 2000);
+        plataformas.add(plataforma3);
+        Empresa empresa2 = new Empresa(12212, "Sony", 37);
+         Resenya resenya3 = new Resenya(4.5, "Buenísimo", new Date());
+        resenyas.add(resenya3);
+        Videojuego videojuego3 = new Videojuego(222, "GodOfWar", 60, Videojuego.Genero.ACCION, new Date(),plataformas,resenyas, empresa2);
+        videojuegos.add(videojuego3);
     }   
     public Videojuego getVideojuegoRandom(){
         return this.videojuegos.get( (int)(Math.random() * this.videojuegos.size()) );
@@ -72,7 +66,7 @@ public class VideojuegosDao {
     return null; // si no existe
     }
 
-    public ArrayList<Videojuego> getVideojuegos() {
+    public List<Videojuego> getVideojuegos() {
         return videojuegos;
     }
 

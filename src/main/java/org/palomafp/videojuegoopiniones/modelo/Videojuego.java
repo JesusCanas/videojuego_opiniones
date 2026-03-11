@@ -82,6 +82,14 @@ public class Videojuego {
     public void setPlataformas(ArrayList<Plataforma> plataformas) {
         this.plataformas = plataformas;
     }
+    
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
 
     @Override
     public String toString() {
@@ -91,6 +99,9 @@ public class Videojuego {
                 ", precio=" + precio +
                 ", genero=" + genero +
                 ", fechaLanzamiento=" + fechaLanzamiento +
+                ", Datos de la empresa \n" + getEmpresa()+
+                
                 '}';
     }
+
 }
