@@ -6,6 +6,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.Scanner;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -83,24 +84,16 @@ public class DatosDaoTest {
     }
 
     @Test
-    public void testAppMainNoLanzaExcepcionYSaleCorrectamente() {
-        InputStream originalIn = System.in;
-        PrintStream originalOut = System.out;
+    public void testMainFunctionalityViaRunMethod() {
         ByteArrayOutputStream bufferOut = new ByteArrayOutputStream();
+        ByteArrayInputStream input = new ByteArrayInputStream("6\n".getBytes());
 
-        try {
-            System.setIn(new ByteArrayInputStream("6\n".getBytes()));
-            System.setOut(new PrintStream(bufferOut));
+        App.run(new Scanner(input), new PrintStream(bufferOut));
 
-            App.main(new String[0]);
-
-            String output = bufferOut.toString();
-            assertTrue(output.contains("=== SISTEMA DE OPINIONES DE VIDEOJUEGOS ==="));
-            assertTrue(output.contains("Saliendo del programa"), "Debe mostrar mensaje de salida");
-        } finally {
-            System.setIn(originalIn);
-            System.setOut(originalOut);
-        }
+        String output = bufferOut.toString();
+        assertTrue(output.contains("=== SISTEMA DE OPINIONES DE VIDEOJUEGOS ==="));
+        assertTrue(output.contains("Saliendo del programa"), "Debe mostrar mensaje de salida");
+        assertTrue(output.contains("=== FIN DE LA DEMOSTRACIÓN ==="));
     }
 
 }
