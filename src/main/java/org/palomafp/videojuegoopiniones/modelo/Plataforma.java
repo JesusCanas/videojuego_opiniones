@@ -1,7 +1,9 @@
 package org.palomafp.videojuegoopiniones.modelo;
 
 import java.util.ArrayList;
-
+/**
+ * 
+ */
 public class Plataforma {
     private int codigo;
     private String modelo;

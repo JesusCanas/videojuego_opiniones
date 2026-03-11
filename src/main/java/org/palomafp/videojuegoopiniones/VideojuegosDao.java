@@ -17,7 +17,7 @@ public class VideojuegosDAO {
 
 
     // private ArrayList<VideojuegosDao> videojuegosDaos= new ArrayList<>();
-   List<Videojuego> videojuegos=  new ArrayList <Videojuego>();
+    List<Videojuego> videojuegos=  new ArrayList <Videojuego>();
 
 
     /**
@@ -25,7 +25,6 @@ public class VideojuegosDAO {
      */
     public VideojuegosDAO(){
         // Crear instancias iniciales
-
         Plataforma plataforma1 = new Plataforma(445, "Nintendo 3DS", Plataforma.Marca.NINTENDO,"Azul", 1000);
         ArrayList<Plataforma> plataformas = new ArrayList <Plataforma>();
         plataformas.add(plataforma1);
