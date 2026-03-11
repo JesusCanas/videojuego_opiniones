@@ -32,9 +32,13 @@ public class Plataforma {
         this.marca = marca;
         this.color = color;
         this.capacidad = capacidad;
-        this.videojuegos = new ArrayList<>();
+        this.videojuegos = new ArrayList<>(); // inicializamos el arrayList de videojuegos pero no lo ponermos en el constructor
     }
-
+     /**
+     * Obtiene el código único de plataforma.
+     *
+     * @return el código de plataforma.
+     */
     public int getCodigo() {
         return codigo;
     }
@@ -42,7 +46,11 @@ public class Plataforma {
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
-
+    /**
+     * Obtiene el modelo de plataforma.
+     *
+     * @return el modelo de plataforma.
+     */
     public String getModelo() {
         return modelo;
     }
@@ -50,7 +58,11 @@ public class Plataforma {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-
+    /**
+     * Obtiene la marca de plataforma.
+     *
+     * @return la marca de plataforma.
+     */
     public Marca getMarca() {
         return marca;
     }
@@ -90,7 +102,7 @@ public class Plataforma {
         this.videojuegos.add(videojuego);
     }
     /**
-     * muestra la informacion
+     * muestra la informacion de la plataforma
      */
     @Override
     public String toString() {
