@@ -99,8 +99,9 @@ public class Videojuego {
                 ", precio=" + precio +
                 ", genero=" + genero +
                 ", fechaLanzamiento=" + fechaLanzamiento +
-                ", Datos de la empresa \n" + getEmpresa()+
-                
+                "\n Datos de la empresa del videojuego \n" + getEmpresa()+
+                " \n Datos de sus plataformas \n" + getPlataformas()+
+                "\n Sus reseñas \n" + getResenyas() +
                 '}';
     }
 

@@ -43,7 +43,7 @@ public class App {
                     out.print(dao.getVideojuegoById(id));
                     break;
                 case 3:
-                    out.print("Introduce el id del videojuego:");
+                    
                 case 4:
                     out.println("Saliendo del programa...");
                     break;
