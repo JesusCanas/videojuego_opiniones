@@ -14,8 +14,9 @@ public class Videojuego {
     private Date fechaLanzamiento;
     private ArrayList<Resenya> resenyas;
     private ArrayList<Plataforma> plataformas;
+    private Empresa empresa;
 
-    public Videojuego(int codigo, String nombre, int precio, Genero genero, Date fechaLanzamiento,ArrayList<Plataforma> plataformas, ArrayList<Resenya> resenyas) {
+    public Videojuego(int codigo, String nombre, int precio, Genero genero, Date fechaLanzamiento,ArrayList<Plataforma> plataformas, ArrayList<Resenya> resenyas, Empresa empresa) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.precio = precio;
@@ -23,6 +24,7 @@ public class Videojuego {
         this.fechaLanzamiento = fechaLanzamiento;
         this.resenyas = resenyas;
         this.plataformas = plataformas;
+        this.empresa = empresa;
     }
 
     public int getCodigo() {

@@ -3,6 +3,7 @@ package org.palomafp.videojuegoopiniones;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.palomafp.videojuegoopiniones.modelo.Empresa;
 import org.palomafp.videojuegoopiniones.modelo.Plataforma;
@@ -16,9 +17,7 @@ public class VideojuegosDao {
 
 
     // private ArrayList<VideojuegosDao> videojuegosDaos= new ArrayList<>();
-     ArrayList<Plataforma> plataformas = new ArrayList <Plataforma>();
-     ArrayList<Resenya> resenyas = new ArrayList <Resenya> ();
-    ArrayList<Videojuego> videojuegos=  new ArrayList <Videojuego>();
+   List<Videojuego> videojuegos=  new ArrayList <Videojuego>();
 
 
     /**
@@ -26,12 +25,22 @@ public class VideojuegosDao {
      */
     public VideojuegosDao(){
         // Crear instancias iniciales
-       
-        
-        Videojuego videojuego1 = new Videojuego(444, "Pokemon", 60, Videojuego.Genero.AVENTURA, new Date(),this.plataformas,this.resenyas);
+
         Plataforma plataforma1 = new Plataforma(445, "Nintendo 3DS", Plataforma.Marca.NINTENDO,"Azul", 1000,videojuego1);
-        Empresa empresa1 = new Empresa(12212, "Nintendo", 100,this.videojuegos);
+        ArrayList<Plataforma> plataformas = new ArrayList <Plataforma>();
+        plataformas.add(plataforma1);
+        
         Resenya resenya1 = new Resenya(4.5, "Buenísimo", new Date());
+        ArrayList<Resenya> resenyas = new ArrayList <Resenya> ();
+        resenyas.add(resenya1);
+        
+        
+        Empresa empresa1 = new Empresa(12212, "Nintendo", 100);
+        Videojuego videojuego1 = new Videojuego(444, "Pokemon", 60, Videojuego.Genero.AVENTURA, new Date(), plataformas, resenyas, empresa1);
+        empresa1.addVideojuego(videojuego1);
+        
+        
+        
         this.plataformas.add(plataforma1);
         this. resenyas.add(resenya1);
         this.videojuegos.add(videojuego1);
@@ -59,9 +68,9 @@ public class VideojuegosDao {
         if (v.getCodigo() == id) {
             return v;
         }
-    }
-    return null; // si no existe
         }
+    return null; // si no existe
+    }
 
     public ArrayList<Videojuego> getVideojuegos() {
         return videojuegos;

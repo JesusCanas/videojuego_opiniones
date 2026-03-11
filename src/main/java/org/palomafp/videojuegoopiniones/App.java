@@ -27,7 +27,7 @@ public class App {
             System.out.println("2. Mostrar plataformas");
             System.out.println("3. Mostrar reseñas");
             System.out.println("4. Mostrar videojuego random");
-            System.out.println("5.  Mostrar videojuego por id");
+            System.out.println("5. Mostrar videojuego por id");
             System.out.println("6. Salir");
             System.out.println("------------------------------");
             System.out.print("Seleccione una opción: ");
