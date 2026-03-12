@@ -36,45 +36,57 @@ public class Plataforma {
     }
      /**
      * Obtiene el código único de plataforma.
-     *
      * @return el código de plataforma.
      */
     public int getCodigo() {
         return codigo;
     }
-
+    /**
+     * * Establece el codigo unico de la plataforma.
+     * @param el código a asignar.
+     */
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
     /**
      * Obtiene el modelo de plataforma.
-     *
      * @return el modelo de plataforma.
      */
     public String getModelo() {
         return modelo;
     }
-
+    /**
+     * Establece el modelo de la plataforma
+     * @param modelo el modelo a asignar
+     */
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
     /**
      * Obtiene la marca de plataforma.
-     *
      * @return la marca de plataforma.
      */
     public Marca getMarca() {
         return marca;
     }
-
+    /**
+     * Establece la marca de la plataforma.
+     * @param marca mar
+     */
     public void setMarca(Marca marca) {
         this.marca = marca;
     }
-
+    /**
+     * 
+     * @return
+     */
     public String getColor() {
         return color;
     }
-
+    /**
+     * Establece el color
+     * @param color
+     */
     public void setColor(String color) {
         this.color = color;
     }
